@@ -1,3 +1,9 @@
 'use strict';
 
-// write your code here
+const table = document.getElementsByTagName('table')[0];
+
+for (const row of table.rows) {
+  const cloneCell = row.cells[1].cloneNode(true);
+
+  row.insertBefore(cloneCell, row.cells[row.cells.length - 1]);
+}
